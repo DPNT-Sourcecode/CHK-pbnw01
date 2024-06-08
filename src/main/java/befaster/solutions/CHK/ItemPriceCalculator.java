@@ -137,7 +137,7 @@ public class ItemPriceCalculator {
                                 numberOfCurrentItem--;
                                 break;
                             case X:
-                                totalCost += 20;
+                                totalCost += 17;
                                 remainingGroupDiscountItems--;
                                 numberOfCurrentItem--;
                                 break;
@@ -147,17 +147,15 @@ public class ItemPriceCalculator {
                                 numberOfCurrentItem--;
                                 break;
                             case Z:
-                                totalCost += 20;
+                                totalCost += 21;
                                 remainingGroupDiscountItems--;
                                 numberOfCurrentItem--;
                                 break;
                         }
                     }      
                 }
+            }
         }
-
-        }
-
         return totalCost;
     }
 
@@ -273,10 +271,10 @@ public class ItemPriceCalculator {
         int costForItems = 0;
         while (quantity > 0) {
             if (quantity >= 2) {
-                costForItems += 150;
+                costForItems += 120;
                 quantity -= 2;
             } else {
-                costForItems += 80;
+                costForItems += 70;
                 quantity--;
             }
         }
@@ -443,6 +441,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
