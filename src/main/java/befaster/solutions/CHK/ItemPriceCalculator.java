@@ -7,7 +7,7 @@ import java.util.Map;
 //        But because this is a timed test, I'm going to leave the while loops as they are
 public class ItemPriceCalculator {
 
-    private static Sku[] groupDiscountSkusPriceDescending = { Sku.Z, Sku.S, Sku.T, Sku.Y, Sku.X };
+    private static Sku[] groupDiscountSkusPriceAscending = { Sku.X, Sku.S, Sku.T, Sku.Y, Sku.Z };
 
     public static int calculateTotalCost(Map<Sku, Integer> basket) {
         int totalCost = 0;
@@ -114,14 +114,20 @@ public class ItemPriceCalculator {
         }
 
         // Calculate price for group discount items
-        for (int i = 0; i < groupDiscountSkusPriceDescending.length; i++) {
-            int remainingGroupDiscountItems = totalGroupDiscountItems;
-            int numberOfCurrentItem = basket.get(groupDiscountSkusPriceDescending[i]).intValue();
-            if (remainingGroupDiscountItems) {
+        while (totalGroupDiscountItems >= 3) {
+            totalCost += 45;
+            totalGroupDiscountItems -= 3;
+        }
 
-                continue;
+        for (int i = 0; i < groupDiscountSkusPriceAscending.length; i++) {
+            int remainingGroupDiscountItems = totalGroupDiscountItems;
+            int numberOfCurrentItem = basket.get(groupDiscountSkusPriceAscending[i]).intValue();
+            if (remainingGroupDiscountItems >= 3) {
+                totalCost += 45;
             } else {
-                switch ()
+                switch (groupDiscountSkusPriceAscending[i]) {
+
+                }
             }
 
         }
@@ -411,5 +417,6 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
