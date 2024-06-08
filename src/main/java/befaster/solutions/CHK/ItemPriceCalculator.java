@@ -248,6 +248,15 @@ public class ItemPriceCalculator {
     }
 
     private static int calculateTotalCostForItemQ(int quantityOfQ, int quantityOfR) {
+        // This approach below fails the test suite - logic for taking this approach:
+        // // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
+        //         So QQQRRR - should:
+        //             Get the discount of 3Qs for 80
+        //             And then remove the price of one full Price Q (i.e. 30)
+        //         Total cost: 50 + (cost of 3 Rs) = 200
+        // But according to the results of the test suite - the correct logic is:
+        //         QQQRRR:
+        //          - Three 
         int costForItems = 0;
         while (quantityOfR >= 3) {
             costForItems -= 30;
@@ -327,3 +336,4 @@ public class ItemPriceCalculator {
     }
 
 }
+
