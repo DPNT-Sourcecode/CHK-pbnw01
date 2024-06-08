@@ -268,7 +268,7 @@ public class CheckoutSolutionTest {
     @Test
     void testCheckoutWithValidItemsWithSpecialOffersForE() {
         String skus = "ABBCCDDEEF";
-        Integer expectedCost = 225;
+        Integer expectedCost = 240;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
@@ -328,16 +328,20 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
-    // Outdated - this was my initial rationale for implementation for cost calculation for B, M and Q
     // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
     //         So QQQRRR - should:
     //             Get the discount of 3Qs for 80
     //             And then remove the price of one full Price Q (i.e. 30)
-    //         Total cost: 50 + (cost of 3 Rs)
+    //         Total cost: 50 + (cost of 3 Rs) = 200
+    // But according to the results of the test suite - the correct logic is:
+    //         QQQRRR:
+    //          - Three Rs - so one Q free
+    //          - Therefore now 2 Qs = 60
+    //          - total cost = 60 + (cost of 3 Rs) = 210
     @Test
     void testCheckoutWithOfferForQ2() {
         String skus = "QQQRRR";
-        Integer expectedCost = 200;
+        Integer expectedCost = 210;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
@@ -369,16 +373,21 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
-    // Outdated - this was my initial rationale for implementation for cost calculation for B, M and Q
+    // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
     // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
     //         So BBEE - should:
     //             Get the discount of 2Bs for 45
     //             And then remove the price of one full Price B (i.e. 30)
-    //         Total cost: 15 + (cost of 2 Es)
+    //         Total cost: 15 + (cost of 2 Es) = 95
+    // But according to the results of the test suite - the correct logic is:
+    //         BBEE:
+    //          - Two Es - so one B free
+    //          - Therefore now 1 B = 40
+    //          - total cost = 30 + (cost of 2 Es) = 110
     @Test
     void testCheckoutWithOfferForB() {
         String skus = "BBEE";
-        Integer expectedCost = 95;
+        Integer expectedCost = 110;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
@@ -411,4 +420,5 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
 
