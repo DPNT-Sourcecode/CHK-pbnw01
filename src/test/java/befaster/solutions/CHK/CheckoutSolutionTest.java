@@ -44,19 +44,26 @@ public class CheckoutSolutionTest {
         Integer expectedCost = 50;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
+
+    @Test
+    void testCheckoutWithValidSevenFsAndThreeAs() {
+        String skus = "AAFFFFFFFA";
+        Integer expectedCost = 180;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
     
 
     @Test
     void testCheckoutWithValidItemsNoSpecialOffers() {
-        String skus = "ABCDF";
-        Integer expectedCost = 125;
+        String skus = "ABCDEF";
+        Integer expectedCost = 165;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
     @Test
     void testCheckoutWithValidItemsWithSpecialOffersForA1() {
-        String skus = "AAABCD";
-        Integer expectedCost = 195;
+        String skus = "AAABCDEF";
+        Integer expectedCost = 245;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
@@ -76,15 +83,15 @@ public class CheckoutSolutionTest {
 
     @Test
     void testCheckoutWithValidItemsWithSpecialOffersForE() {
-        String skus = "ABBCCDDEE";
-        Integer expectedCost = 230;
+        String skus = "ABBCCDDEEF";
+        Integer expectedCost = 240;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
     @Test
     void testCheckoutWithValidItemsAndAllOffers() {
-        String skus = "AAAAABBBCDEE";
-        Integer expectedCost = 360;
+        String skus = "AAAAABBBCDEEFFFFFFFFF";
+        Integer expectedCost = 420;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
@@ -116,4 +123,5 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
 
