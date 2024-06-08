@@ -15,6 +15,20 @@ public class CheckoutSolutionTest {
     }
 
     @Test
+    void testAIndividually() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testBIndividually() {
+        String skus = "B";
+        Integer expectedCost = 30;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
     void testCheckoutWithValidItemsNoSpecialOffers() {
         String skus = "ABCD";
         Integer expectedCost = 115;
@@ -77,5 +91,6 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
 
 
