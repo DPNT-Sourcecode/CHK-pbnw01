@@ -118,23 +118,39 @@ public class ItemPriceCalculator {
     }
 
     private static int calculateTotalCostForItemB(int quantityOfB, int quantityOfE) {
+        // This approach fails the test suite - see "calculateTotalCostForItemQ()" below for justification of this approach
+        // int costForItems = 0;
+        // while (quantityOfE >= 2) {
+        //     costForItems -= 30;
+        //     quantityOfE -=2;
+        // }
+        // while (quantityOfB > 0) {
+        //     if (quantityOfB >= 2) {
+        //         costForItems += 45;
+        //         quantityOfB -= 2;
+        //     } else {
+        //         costForItems += 30;
+        //         quantityOfB--;
+        //     }
+        // }
+        // // Protect against a negative costForItem B
+        // costForItems = (costForItems >= 0) ? costForItems : 0;
+        // return costForItems;
+            
         int costForItems = 0;
-        while (quantityOfE >= 2) {
-            costForItems -= 30;
-            quantityOfE -=2;
-        }
         while (quantityOfB > 0) {
-            if (quantityOfB >= 2) {
+            if (quantityOfE >= 2) {
+                quantityOfE -= 2;
+                quantityOfB--;
+            } else if (quantityOfB >= 2) {
                 costForItems += 45;
                 quantityOfB -= 2;
             } else {
                 costForItems += 30;
                 quantityOfB--;
             }
-        }
-        // Protect against a negative costForItem B
-        costForItems = (costForItems >= 0) ? costForItems : 0;
-        return costForItems;
+        } 
+
     }
 
     private static int calculateTotalCostForItemC(int quantity) {
@@ -212,24 +228,30 @@ public class ItemPriceCalculator {
 
     private static int calculateTotalCostForItemM(int quantityOfM, int quantityOfN) {
         // This approach fails the test suite - see "calculateTotalCostForItemQ()" below for justification of this approach
+        // int costForItems = 0;
+        // while (quantityOfN >= 3) {
+        //     costForItems -= 15;
+        //     quantityOfN -=3;
+        // }
+        // while (quantityOfM > 0) {
+        //         costForItems += 15;
+        //         quantityOfM--;
+        // }
+        // // Protect against a negative costForItem M
+        // costForItems = (costForItems >= 0) ? costForItems : 0;
+        // return costForItems;
+
         int costForItems = 0;
-        while (quantityOfN >= 3) {
-            costForItems -= 15;
-            quantityOfN -=3;
-        }
         while (quantityOfM > 0) {
+            if (quantityOfN >= 3) {
+                quantityOfN -= 3;
+                quantityOfM--;
+            } else {
                 costForItems += 15;
                 quantityOfM--;
+            }
         }
-        // Protect against a negative costForItem M
-        costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
-
-        int costForItems = 0
-        while (quantityOfM > 0) {
-            costForItems += 15;
-            quantityOfM--;
-    }
     }
 
     private static int calculateTotalCostForItemN(int quantity) {
@@ -360,5 +382,6 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
