@@ -28,13 +28,8 @@ public class CheckoutSolution {
             return Integer.valueOf(-1);
         }
 
-
-        
-
         // Calculate the totalCost (taking into account special offers)
-        int totalCost = 0;
-
-        
+        int totalCost = ItemPriceCalculator.calculateTotalCost(basket);
 
         return Integer.valueOf(totalCost);
     }
@@ -69,5 +64,6 @@ public class CheckoutSolution {
     }
 
 }
+
 
 

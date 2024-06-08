@@ -1,6 +1,5 @@
 package befaster.solutions.CHK;
 
-import java.security.Key;
 import java.util.Map;
 
 public class ItemPriceCalculator {
@@ -13,7 +12,7 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemA(basket.get(key).intValue());
                     break;
                 case B:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemB(basket.get(key).intValue(), basket.get(Sku.E));
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemB(basket.get(key).intValue(), basket.get(Sku.E).intValue());
                     break;
                 case C:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemC(basket.get(key).intValue());
@@ -75,6 +74,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
