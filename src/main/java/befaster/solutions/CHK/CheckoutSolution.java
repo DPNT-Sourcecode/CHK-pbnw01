@@ -77,56 +77,56 @@ public class CheckoutSolution {
                     case 'I':
                         basket.merge(Sku.I, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'J':
+                        basket.merge(Sku.J, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'K':
+                        basket.merge(Sku.K, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'L':
+                        basket.merge(Sku.L, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'M':
+                        basket.merge(Sku.M, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'N':
+                        basket.merge(Sku.N, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'O':
+                        basket.merge(Sku.O, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'P':
+                        basket.merge(Sku.P, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'Q':
+                        basket.merge(Sku.Q, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'R':
+                        basket.merge(Sku.R, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'S':
+                        basket.merge(Sku.S, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'T':
+                        basket.merge(Sku.T, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'U':
+                        basket.merge(Sku.U, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'V':
+                        basket.merge(Sku.V, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'W':
+                        basket.merge(Sku.W, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'X':
+                        basket.merge(Sku.X, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'Y':
+                        basket.merge(Sku.Y, 1, Integer::sum);
                         break;
-                    case 'F':
-                        basket.merge(Sku.F, 1, Integer::sum);
+                    case 'Z':
+                        basket.merge(Sku.Z, 1, Integer::sum);
                         break;
                 }
             }
@@ -135,4 +135,5 @@ public class CheckoutSolution {
     }
 
 }
+
 
