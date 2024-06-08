@@ -245,6 +245,9 @@ public class ItemPriceCalculator {
 
     private static int calculateTotalCostForItemQ(int quantityOfQ, int quantityOfR) {
         int costForItems = 0;
+        while (quantityOfR > 0) {
+            totalCost -=
+        }
         while (quantityOfQ > 0) {
             if (quantityOfR >= 3) {
                 quantityOfR -= 3;
@@ -320,6 +323,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
