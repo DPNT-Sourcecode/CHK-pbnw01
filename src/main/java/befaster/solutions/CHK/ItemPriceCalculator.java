@@ -114,33 +114,47 @@ public class ItemPriceCalculator {
         }
 
         // Calculate price for group discount items
-        int remainingGroupDiscountItems 
-        while (totalGroupDiscountItems >= 3) {
+        int remainingGroupDiscountItems = totalGroupDiscountItems;
+        while (remainingGroupDiscountItems >= 3) {
             totalCost += 45;
-            totalGroupDiscountItems -= 3;
+            remainingGroupDiscountItems -= 3;
         }
-        if (totalGroupDiscountItems >)
-        for (int i = 0; i < groupDiscountSkusPriceAscending.length; i++) {
-            int numberOfCurrentItem = basket.get(groupDiscountSkusPriceAscending[i]).intValue();
-            if (numberOfCurrentItem > 0) {
-                while ()
-                switch (groupDiscountSkusPriceAscending[i]) {
-                    // TODO - implement a class that associates Sku with its base price
-                    case Sku.S:
-
-                    case Sku.T:
-                    case Sku.X:
-                    case Sku.T:
-                    case Sku.Z:
+        if (remainingGroupDiscountItems > 0) {
+            for (int i = 0; i < groupDiscountSkusPriceAscending.length; i++) {
+                int numberOfCurrentItem = basket.get(groupDiscountSkusPriceAscending[i]).intValue();
+                if (numberOfCurrentItem > 0) {
+                    while (remainingGroupDiscountItems > 0 && numberOfCurrentItem > 0) {
+                        switch (groupDiscountSkusPriceAscending[i]) {
+                            // TODO - implement a class that associates Sku with its base price
+                            case S:
+                                totalCost += 20;
+                                remainingGroupDiscountItems--;
+                                numberOfCurrentItem--;
+                                break;
+                            case T:
+                                totalCost += 20;
+                                remainingGroupDiscountItems--;
+                                numberOfCurrentItem--;
+                                break;
+                            case X:
+                                totalCost += 20;
+                                remainingGroupDiscountItems--;
+                                numberOfCurrentItem--;
+                                break;
+                            case Y:
+                                totalCost += 20;
+                                remainingGroupDiscountItems--;
+                                numberOfCurrentItem--;
+                                break;
+                            case Z:
+                                totalCost += 20;
+                                remainingGroupDiscountItems--;
+                                numberOfCurrentItem--;
+                                break;
+                        }
+                    }      
                 }
-            }
-            if (remainingGroupDiscountItems >= 3) {
-                totalCost += 45;
-            } else {
-                switch (groupDiscountSkusPriceAscending[i]) {
-
-                }
-            }
+        }
 
         }
 
@@ -429,6 +443,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
