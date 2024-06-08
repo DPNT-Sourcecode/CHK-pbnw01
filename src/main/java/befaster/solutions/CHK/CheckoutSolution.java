@@ -12,14 +12,36 @@ public class CheckoutSolution {
         numA = numB = numC = numD = 0;
 
         for (int i = 0; i < skusArray.length; i++) {
-            if (skusArray[i] < 'A' || skusArray[i] > 'D')
+            if (skusArray[i] < 'A' || skusArray[i] > 'D') {
+                // Error - invalid item
+                return -1;
+            }
+            switch (skusArray[i]) {
+                case 'A':
+                    numA++;
+                    break;
+                case 'B':
+                    numB++;
+                    break;
+                case 'C':
+                    numC++;
+                    break;
+                case 'D':
+                    numD++;
+                    break;
+            }
         }
+
+        int totalCost = 0;
 
         return -1;
     }
 
+    
+
 
 }
+
 
 
 
