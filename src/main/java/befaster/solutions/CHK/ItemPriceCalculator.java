@@ -25,6 +25,9 @@ public class ItemPriceCalculator {
                 case E:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemE(basket.get(key).intValue());
                     break;
+                case F:
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    break;
             }        
         }
         return totalCost;
@@ -76,5 +79,9 @@ public class ItemPriceCalculator {
         return quantity * 40;
     }
 
-}
+    private static int calculateTotalCostForItemF(int quantity) {
+        int cost
 
+    }
+
+}

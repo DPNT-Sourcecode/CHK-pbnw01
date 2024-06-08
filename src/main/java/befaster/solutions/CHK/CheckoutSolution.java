@@ -20,7 +20,7 @@ public class CheckoutSolution {
 
         // Constants
         final char MIN_ITEM_CHAR = 'A';
-        final char MAX_ITEM_CHAR = 'E';
+        final char MAX_ITEM_CHAR = 'F';
 
         public Checkout() {
             basket = new HashMap<Sku, Integer>();
@@ -65,6 +65,8 @@ public class CheckoutSolution {
                     case 'E':
                         basket.merge(Sku.E, 1, Integer::sum);
                         break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
                 }
             }
             return true;
@@ -72,5 +74,3 @@ public class CheckoutSolution {
     }
 
 }
-
-
