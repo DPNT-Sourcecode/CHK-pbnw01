@@ -15,7 +15,7 @@ public class CheckoutSolution {
         for (int i = 0; i < skusArray.length; i++) {
             if (skusArray[i] < 'A' || skusArray[i] > 'D') {
                 // Error - invalid item
-                return -1;
+                return Integer.valueOf(-1);
             }
             switch (skusArray[i]) {
                 case 'A':
@@ -63,3 +63,4 @@ public class CheckoutSolution {
     }
 
 }
+
