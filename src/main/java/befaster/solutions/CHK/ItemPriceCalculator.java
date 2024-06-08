@@ -97,6 +97,9 @@ public class ItemPriceCalculator {
                     break;
             }        
         }
+
+        // Calculate price for group discount items
+
         return totalCost;
     }
 
@@ -382,6 +385,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
