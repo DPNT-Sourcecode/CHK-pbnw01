@@ -150,7 +150,7 @@ public class ItemPriceCalculator {
                 quantityOfB--;
             }
         } 
-
+        return costForItems;
     }
 
     private static int calculateTotalCostForItemC(int quantity) {
@@ -227,7 +227,7 @@ public class ItemPriceCalculator {
     }
 
     private static int calculateTotalCostForItemM(int quantityOfM, int quantityOfN) {
-        // This approach fails the test suite - see "calculateTotalCostForItemQ()" below for justification of this approach
+        // To keep approaches consistent also changed here - see "calculateTotalCostForItemQ()" below for reasoning behind changing approaches
         // int costForItems = 0;
         // while (quantityOfN >= 3) {
         //     costForItems -= 15;
@@ -382,6 +382,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 

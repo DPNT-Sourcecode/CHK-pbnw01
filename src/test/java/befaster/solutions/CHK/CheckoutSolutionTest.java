@@ -328,6 +328,7 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
+    // Outdated - this was my initial rationale for implementation for cost calculation for B, M and Q
     // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
     //         So QQQRRR - should:
     //             Get the discount of 3Qs for 80
@@ -368,6 +369,7 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
+    // Outdated - this was my initial rationale for implementation for cost calculation for B, M and Q
     // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
     //         So BBEE - should:
     //             Get the discount of 2Bs for 45
@@ -409,3 +411,4 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
