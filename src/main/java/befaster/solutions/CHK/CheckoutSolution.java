@@ -20,7 +20,7 @@ public class CheckoutSolution {
 
         // Constants
         final char MIN_ITEM_CHAR = 'A';
-        final char MAX_ITEM_CHAR = 'F';
+        final char MAX_ITEM_CHAR = 'Z';
 
         public Checkout() {
             basket = new HashMap<Sku, Integer>();
@@ -67,6 +67,67 @@ public class CheckoutSolution {
                         break;
                     case 'F':
                         basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'G':
+                        basket.merge(Sku.G, 1, Integer::sum);
+                        break;
+                    case 'H':
+                        basket.merge(Sku.H, 1, Integer::sum);
+                        break;
+                    case 'I':
+                        basket.merge(Sku.I, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
+                    case 'F':
+                        basket.merge(Sku.F, 1, Integer::sum);
+                        break;
                 }
             }
             return true;
@@ -74,3 +135,4 @@ public class CheckoutSolution {
     }
 
 }
+
