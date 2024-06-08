@@ -132,6 +132,7 @@ public class ItemPriceCalculator {
                 quantityOfB--;
             }
         }
+        // Protect against a negative costForItem B
         costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
     }
@@ -219,7 +220,7 @@ public class ItemPriceCalculator {
                 costForItems += 15;
                 quantityOfM--;
         }
-        // Protect against a negative costForItemM
+        // Protect against a negative costForItem M
         costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
     }
@@ -326,3 +327,4 @@ public class ItemPriceCalculator {
     }
 
 }
+
