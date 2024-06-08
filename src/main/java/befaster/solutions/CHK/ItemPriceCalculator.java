@@ -116,7 +116,13 @@ public class ItemPriceCalculator {
         // Calculate price for group discount items
         for (int i = 0; i < groupDiscountSkusPriceDescending.length; i++) {
             int remainingGroupDiscountItems = totalGroupDiscountItems;
-            if ()
+            int numberOfCurrentItem = basket.get(groupDiscountSkusPriceDescending[i]).intValue();
+            if (remainingGroupDiscountItems) {
+
+                continue;
+            } else {
+                switch ()
+            }
 
         }
 
@@ -405,4 +411,5 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
