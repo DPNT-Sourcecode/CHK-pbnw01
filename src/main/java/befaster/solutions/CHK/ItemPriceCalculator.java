@@ -29,52 +29,52 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
                     break;
                 case G:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemG(basket.get(key).intValue());
                     break;
                 case H:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemH(basket.get(key).intValue());
                     break;
                 case I:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemI(basket.get(key).intValue());
                     break;
                 case J:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemJ(basket.get(key).intValue());
                     break;
                 case K:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemK(basket.get(key).intValue());
                     break;
                 case L:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemL(basket.get(key).intValue());
                     break;
                 case M:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemM(basket.get(key).intValue());
                     break;
                 case N:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemN(basket.get(key).intValue());
                     break;
                 case O:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemO(basket.get(key).intValue());
                     break;
                 case P:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemP(basket.get(key).intValue());
                     break;
                 case Q:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemQ(basket.get(key).intValue());
                     break;
                 case R:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemR(basket.get(key).intValue());
                     break;
                 case S:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemS(basket.get(key).intValue());
                     break;
                 case T:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemT(basket.get(key).intValue());
                     break;
                 case U:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemU(basket.get(key).intValue());
                     break;
                 case V:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemV(basket.get(key).intValue());
                     break;
                 case W:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
@@ -272,10 +272,45 @@ public class ItemPriceCalculator {
                 costForItems += 120;
                 quantity -= 4;
             } else {
+                costForItems += 40;
+                quantity--;
+            }
+        }
+        return costForItems;
+    }
+
+    private static int calculateTotalCostForItemV(int quantity) {
+        int costForItems = 0;
+        while (quantity > 0) {
+            if (quantity >= 3) {
+                costForItems += 130;
+                quantity -= 3;
+            } else if (quantity >= 2) {
+                costForItems += 90;
+                quantity -= 2;
+            } else {
                 costForItems += 50;
                 quantity--;
             }
         }
         return costForItems;
     }
+
+    private static int calculateTotalCostForItemW(int quantity) {
+        return quantity * 20;
+    }
+
+    private static int calculateTotalCostForItemX(int quantity) {
+        return quantity * 90;
+    }
+
+    private static int calculateTotalCostForItemY(int quantity) {
+        return quantity * 10;
+    }
+
+    private static int calculateTotalCostForItemZ(int quantity) {
+        return quantity * 50;
+    }
+
 }
+
