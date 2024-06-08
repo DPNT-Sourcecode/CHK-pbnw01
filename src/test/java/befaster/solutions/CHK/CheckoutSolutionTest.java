@@ -25,159 +25,159 @@ public class CheckoutSolutionTest {
     @Test
     void testIndividualB() {
         String skus = "B";
+        Integer expectedCost = 30;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualC() {
+        String skus = "C";
+        Integer expectedCost = 20;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualD() {
+        String skus = "D";
+        Integer expectedCost = 15;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualE() {
+        String skus = "E";
+        Integer expectedCost = 40;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualF() {
+        String skus = "F";
+        Integer expectedCost = 10;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualG() {
+        String skus = "G";
+        Integer expectedCost = 20;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualH() {
+        String skus = "H";
+        Integer expectedCost = 10;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualI() {
+        String skus = "I";
+        Integer expectedCost = 35;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualJ() {
+        String skus = "J";
+        Integer expectedCost = 60;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualK() {
+        String skus = "K";
+        Integer expectedCost = 80;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualL() {
+        String skus = "L";
+        Integer expectedCost = 90;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualM() {
+        String skus = "M";
+        Integer expectedCost = 15;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualN() {
+        String skus = "N";
+        Integer expectedCost = 40;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualO() {
+        String skus = "O";
+        Integer expectedCost = 10;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualP() {
+        String skus = "P";
         Integer expectedCost = 50;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
     @Test
-    void testIndividualA() {
-        String skus = "A";
+    void testIndividualQ() {
+        String skus = "Q";
+        Integer expectedCost = 30;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualR() {
+        String skus = "R";
         Integer expectedCost = 50;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
     @Test
-    void testIndividualA() {
-        String skus = "A";
+    void testIndividualS() {
+        String skus = "S";
+        Integer expectedCost = 30;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualT() {
+        String skus = "T";
+        Integer expectedCost = 20;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualU() {
+        String skus = "U";
+        Integer expectedCost = 40;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualV() {
+        String skus = "V";
         Integer expectedCost = 50;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
     @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
+    void testIndividualW() {
+        String skus = "W";
+        Integer expectedCost = 20;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
     @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
-        String skus = "A";
-        Integer expectedCost = 50;
-        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
-    }
-
-    @Test
-    void testIndividualA() {
+    void testIndividualX() {
         String skus = "A";
         Integer expectedCost = 50;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
@@ -307,4 +307,5 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
 
