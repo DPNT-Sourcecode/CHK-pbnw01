@@ -76,16 +76,16 @@ public class ItemPriceCalculator {
                 case V:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
                     break;
-                case F:
+                case W:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
                     break;
-                case F:
+                case X:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
                     break;
-                case F:
+                case Y:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
                     break;
-                case F:
+                case Z:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
                     break;
             }        
@@ -153,6 +153,55 @@ public class ItemPriceCalculator {
         return costForItems;
     }
 
+    private static int calculateTotalCostForItemG(int quantity) {
+        return quantity * 20;
+    }
+
+    private static int calculateTotalCostForItemH(int quantity) {
+        int costForItems = 0;
+        while (quantity > 0) {
+            if (quantity >= 10) {
+                costForItems += 80;
+                quantity -= 10;
+            } else if (quantity >= 5) {
+                costForItems += 45;
+                quantity -= 5;
+            } else {
+                costForItems += 10;
+                quantity--;
+            }
+        }
+        return costForItems;
+    }
+
+    private static int calculateTotalCostForItemI(int quantity) {
+        return quantity * 35;
+    }
+
+    private static int calculateTotalCostForItemJ(int quantity) {
+        return quantity * 60;
+    }
+
+    private static int calculateTotalCostForItemH(int quantity) {
+        int costForItems = 0;
+        while (quantity > 0) {
+            if (quantity >= 10) {
+                costForItems += 80;
+                quantity -= 10;
+            } else {
+                costForItems += 10;
+                quantity--;
+            }
+        }
+        return costForItems;
+    }
+
+    private static int calculateTotalCostForItemL(int quantity) {
+        return quantity * 35;
+    }
+
+
 }
+
 
 
