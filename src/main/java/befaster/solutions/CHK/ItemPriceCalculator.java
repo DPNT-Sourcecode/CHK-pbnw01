@@ -66,7 +66,7 @@ public class ItemPriceCalculator {
                 case Q:
                     Integer quantityOfR = basket.get(Sku.R);
                     int intQuantityOfR = (quantityOfR == null) ? 0 : quantityOfR.intValue(); 
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemQ(basket.get(key).intValue(), );
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemQ(basket.get(key).intValue(), intQuantityOfR);
                     break;
                 case R:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemR(basket.get(key).intValue());
@@ -320,6 +320,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
