@@ -5,20 +5,27 @@ public class ItemPriceCalculator {
     public static int calculateTotalCost(Sku sku, int quantity) {
         int totalCost = 0;
         switch (sku) {
-            case Sku.A:
-
-            case Sku.B:
-            case Sku.C:
-            case Sku.D:
-            case Sku.E:
-
+            case A:
+                totalCost += ItemPriceCalculator.calculateTotalCostForItemA(quantity);
+                break;
+            case B:
+                totalCost += ItemPriceCalculator.calculateTotalCostForItemB(quantity);
+                break;
+            case C:
+                totalCost += ItemPriceCalculator.calculateTotalCostForItemC(quantity);
+                break;
+            case D:
+                totalCost += ItemPriceCalculator.calculateTotalCostForItemD(quantity);
+                break;
+            case E:
+                totalCost += ItemPriceCalculator.calculateTotalCostForItemE(quantity);
+                break;
         }
+        return totalCost;
     }
 
     private static int calculateTotalCostForItemA(int quantity) {
-        
         int costForItems = 0;
-
         while (quantity > 0) {
             if (quantity >= 5) {
                 costForItems += 200;
@@ -31,14 +38,11 @@ public class ItemPriceCalculator {
                 quantity--;
             }
         }
-
         return costForItems;
     }
 
     private static int calculateTotalCostForItemB(int quantityOfB, int quantityOfE) {
-        
         int costForItems = 0;
-
         while (quantityOfB > 0) {
             if (quantityOfE >= 2) {
                 quantityOfB--;
@@ -50,7 +54,6 @@ public class ItemPriceCalculator {
                 quantityOfB--;
             }
         }
-
         return costForItems;
     }
 
@@ -63,9 +66,11 @@ public class ItemPriceCalculator {
     }
 
     private static int calculateTotalCostForItemE(int quantity) {
+        return quantity * 40;
     }
 
 }
+
 
 
 
