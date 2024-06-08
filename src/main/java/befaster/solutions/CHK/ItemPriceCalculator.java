@@ -80,8 +80,18 @@ public class ItemPriceCalculator {
     }
 
     private static int calculateTotalCostForItemF(int quantity) {
-        int cost
-
+        int costForItems = 0;
+        while (quantity > 0) {
+            if (quantity >= 3) {
+                costForItems += 20;
+                quantity -= 3;
+            } else {
+                costForItems += 10;
+                quantity--;
+            }
+        }
+        return costForItems;
     }
 
 }
+
