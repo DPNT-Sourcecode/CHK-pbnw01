@@ -11,6 +11,7 @@ public class CheckoutSolution {
         int numA, numB, numC, numD;
         numA = numB = numC = numD = 0;
 
+        // Check all items in the "skus" String are valid
         for (int i = 0; i < skusArray.length; i++) {
             if (skusArray[i] < 'A' || skusArray[i] > 'D') {
                 // Error - invalid item
@@ -32,6 +33,7 @@ public class CheckoutSolution {
             }
         }
 
+        // Calculate the totalCost (taking into account special offers)
         int totalCost = 0;
 
         while (numA > 0) {
@@ -55,15 +57,13 @@ public class CheckoutSolution {
         }
 
         totalCost += (numC * 20);
-        totalCost += (num)
+        totalCost += (numD * 20);
 
-        return -1;
+        return totalCost;
     }
 
-
-
-
 }
+
 
 
 
