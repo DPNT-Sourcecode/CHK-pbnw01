@@ -16,11 +16,47 @@ public class ItemPriceCalculator {
     }
 
     private static int calculateTotalCostForItemA(int quantity) {
+        
+        int costForItems = 0;
+
         while (quantity > 0) {
-            
+            if (quantity >= 5) {
+                costForItems += 200;
+                quantity -= 5;
+            } else if (quantity >= 3) {
+                costForItems += 130;
+                quantity -= 3;
+            } else {
+                costForItems += 50;
+                quantity--;
+            }
         }
 
+        return costForItems;
     }
+
+    private static int calculateTotalCostForItemB(int quantity) {
+        
+        int costForItems = 0;
+
+        while (quantity > 0) {
+            if (quantity >= 2) {
+                costForItems += 45;
+                quantity -= 2;
+            } else {
+                costForItems += 30;
+                quantity--;
+            }
+        }
+
+        return costForItems;
+    }
+
+    private static int calculateTotalCostForItemC(int quantity) {
+        return quantity * 
+    }
+
+
 
     while (numA > 0) {
         if (numA >= 3) {
@@ -46,4 +82,5 @@ public class ItemPriceCalculator {
     totalCost += (numD * 15);
 
 }
+
 
