@@ -10,35 +10,12 @@ public class CheckoutSolution {
     Map<Sku, Integer> basket;
 
     public CheckoutSolution() {
-        basket = new
+        basket = new HashMap<Sku, Integer>();
     }
 
     public Integer checkout(String skus) {
         char[] skusArray = skus.toCharArray();
-        int numA, numB, numC, numD;
-        numA = numB = numC = numD = 0;
-
-        // Check all items in the "skus" String are valid
-        for (int i = 0; i < skusArray.length; i++) {
-            if (skusArray[i] < 'A' || skusArray[i] > 'D') {
-                // Error - invalid item
-                return Integer.valueOf(-1);
-            }
-            switch (skusArray[i]) {
-                case 'A':
-                    numA++;
-                    break;
-                case 'B':
-                    numB++;
-                    break;
-                case 'C':
-                    numC++;
-                    break;
-                case 'D':
-                    numD++;
-                    break;
-            }
-        }
+        
 
         // Calculate the totalCost (taking into account special offers)
         int totalCost = 0;
@@ -69,6 +46,34 @@ public class CheckoutSolution {
         return Integer.valueOf(totalCost);
     }
 
+    // Returns true if all items are valid; false otherwise
+    private boolean addItemsToBasket(char[] skusArray) {
+
+        for (int i = 0; i < skusArray.length; i++) {
+            if (skusArray[i] < 'A' || skusArray[i] > 'D') {
+                // Error - invalid item
+                return Integer.valueOf(-1);
+            }
+            switch (skusArray[i]) {
+                case 'A':
+                    numA++;
+                    break;
+                case 'B':
+                    numB++;
+                    break;
+                case 'C':
+                    numC++;
+                    break;
+                case 'D':
+                    numD++;
+                    break;
+            }
+        }
+
+        return true;
+    }
+
 }
+
 
 
