@@ -8,42 +8,52 @@ import befaster.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
 
     Map<Sku, Integer> basket;
+    int totalCost;
+
     final char MIN_ITEM_CHAR = 'A';
     final char MAX_ITEM_CHAR = 'E';
 
     public CheckoutSolution() {
         basket = new HashMap<Sku, Integer>();
+        totalCost = 0;
     }
 
     public Integer checkout(String skus) {
         char[] skusArray = skus.toCharArray();
+
+        if (!addItemsToBasket(skusArray)) {
+            // Error - invalid sku in String
+            return Integer.valueOf(-1);
+        }
+
+
         
 
         // Calculate the totalCost (taking into account special offers)
         int totalCost = 0;
 
-        while (numA > 0) {
-            if (numA >= 3) {
-                totalCost += 130;
-                numA -= 3;
-            } else {
-                totalCost += 50;
-                numA--;
-            }
-        }
+        // while (numA > 0) {
+        //     if (numA >= 3) {
+        //         totalCost += 130;
+        //         numA -= 3;
+        //     } else {
+        //         totalCost += 50;
+        //         numA--;
+        //     }
+        // }
 
-        while (numB > 0) {
-            if (numB >= 2) {
-                totalCost += 45;
-                numB -= 2;
-            } else {
-                totalCost += 30;
-                numB--;
-            }
-        }
+        // while (numB > 0) {
+        //     if (numB >= 2) {
+        //         totalCost += 45;
+        //         numB -= 2;
+        //     } else {
+        //         totalCost += 30;
+        //         numB--;
+        //     }
+        // }
 
-        totalCost += (numC * 20);
-        totalCost += (numD * 15);
+        // totalCost += (numC * 20);
+        // totalCost += (numD * 15);
 
         return Integer.valueOf(totalCost);
     }
@@ -62,23 +72,20 @@ public class CheckoutSolution {
                     break;
                 case 'B':
                     basket.merge(Sku.A, 1, Integer::sum);
-                    numB++;
                     break;
                 case 'C':
                     basket.merge(Sku.A, 1, Integer::sum);
-                    numC++;
                     break;
                 case 'D':
                     basket.merge(Sku.A, 1, Integer::sum);
-                    numD++;
                     break;
                 case 'E':
                     basket.merge(Sku.A, 1, Integer::sum);
-
+                    break;
             }
         }
-
         return true;
     }
 
 }
+
