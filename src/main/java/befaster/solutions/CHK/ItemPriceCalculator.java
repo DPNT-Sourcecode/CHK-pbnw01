@@ -119,6 +119,23 @@ public class ItemPriceCalculator {
 
     private static int calculateTotalCostForItemB(int quantityOfB, int quantityOfE) {
         int costForItems = 0;
+        while (quantityOfE >= 2) {
+            costForItems -= 30;
+            quantityOfE -=2;
+        }
+        while (quantityOfB > 0) {
+            if (quantityOfB >= 2) {
+                costForItems += 45;
+                quantityOfB -= 2;
+            } else {
+                costForItems += 30;
+                quantityOfQ--;
+            }
+        }
+        costForItems = (costForItems >= 0) ? costForItems : 0;
+        return costForItems;
+
+        int costForItems = 0;
         while (quantityOfB > 0) {
             if (quantityOfE >= 2) {
                 quantityOfE -= 2;
@@ -246,13 +263,11 @@ public class ItemPriceCalculator {
     private static int calculateTotalCostForItemQ(int quantityOfQ, int quantityOfR) {
         int costForItems = 0;
         while (quantityOfR > 0) {
-            totalCost -=
+            costForItems -= 30;
+            quantityOfR -=3;
         }
         while (quantityOfQ > 0) {
-            if (quantityOfR >= 3) {
-                quantityOfR -= 3;
-                quantityOfQ--;
-            } else if (quantityOfQ >= 3) {
+            if (quantityOfQ >= 3) {
                 costForItems += 80;
                 quantityOfQ -= 3;
             } else {
@@ -260,6 +275,7 @@ public class ItemPriceCalculator {
                 quantityOfQ--;
             }
         }
+        costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
     }
 
@@ -323,6 +339,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
