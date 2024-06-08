@@ -11,6 +11,7 @@ public class ItemPriceCalculator {
 
     public static int calculateTotalCost(Map<Sku, Integer> basket) {
         int totalCost = 0;
+        int totalGroupDiscountItems = 0;
 
         // For no group discount items
         for (Sku key : basket.keySet()) {
@@ -76,10 +77,14 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemR(basket.get(key).intValue());
                     break;
                 case S:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemS(basket.get(key).intValue());
+                    // Group discount
+                    totalGroupDiscountItems += basket.get(key).intValue();
+                    // totalCost += ItemPriceCalculator.calculateTotalCostForItemS(basket.get(key).intValue());
                     break;
                 case T:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemT(basket.get(key).intValue());
+                    // Group discount
+                    totalGroupDiscountItems += basket.get(key).intValue();
+                    // totalCost += ItemPriceCalculator.calculateTotalCostForItemT(basket.get(key).intValue());
                     break;
                 case U:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemU(basket.get(key).intValue());
@@ -91,18 +96,29 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemW(basket.get(key).intValue());
                     break;
                 case X:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemX(basket.get(key).intValue());
+                    // Group discount
+                    totalGroupDiscountItems += basket.get(key).intValue();
+                    // totalCost += ItemPriceCalculator.calculateTotalCostForItemX(basket.get(key).intValue());
                     break;
                 case Y:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemY(basket.get(key).intValue());
+                    // Group discount
+                    totalGroupDiscountItems += basket.get(key).intValue();
+                    // totalCost += ItemPriceCalculator.calculateTotalCostForItemY(basket.get(key).intValue());
                     break;
                 case Z:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemZ(basket.get(key).intValue());
+                    // Group discount
+                    totalGroupDiscountItems += basket.get(key).intValue();
+                    // totalCost += ItemPriceCalculator.calculateTotalCostForItemZ(basket.get(key).intValue());
                     break;
             }        
         }
 
         // Calculate price for group discount items
+        for (int i = 0; i < groupDiscountSkusPriceDescending.length; i++) {
+            int remainingGroupDiscountItems = totalGroupDiscountItems;
+            if ()
+
+        }
 
         return totalCost;
     }
@@ -389,3 +405,4 @@ public class ItemPriceCalculator {
     }
 
 }
+
