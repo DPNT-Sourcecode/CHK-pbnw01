@@ -4,6 +4,7 @@ public enum Sku {
     A,
     B,
     C,
-    D
-
+    D,
+    E
 }
+
