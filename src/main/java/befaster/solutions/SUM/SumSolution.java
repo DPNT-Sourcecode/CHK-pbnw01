@@ -5,9 +5,10 @@ import befaster.runner.SolutionNotImplementedException;
 @SuppressWarnings("unused")
 public class SumSolution {
 
-    public int sum(int x, int y) {
+    public int compute(int x, int y) {
         return x + y;
     }
 
 }
+
 
