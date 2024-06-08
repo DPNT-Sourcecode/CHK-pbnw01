@@ -300,6 +300,45 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
+    @Test
+    void testCheckoutWithOfferForK() {
+        String skus = "KK";
+        Integer expectedCost = 150;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testCheckoutWithOfferForM() {
+        String skus = "MNNNMNNNM";
+        Integer expectedCost = 15;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testCheckoutWithOfferForP() {
+        String skus = "PPPPP";
+        Integer expectedCost = 200;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testCheckoutWithOfferForQ1() {
+        String skus = "QQQ";
+        Integer expectedCost = 80;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
+    //         So QQQRRR - should:
+    //             Get the discount of 3
+    @Test
+    void testCheckoutWithOfferForQ2() {
+        String skus = "HHHHHH";
+        Integer expectedCost = 55;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+
     // Invalid items
     @Test
     void testCheckoutWithInvalidItems1() {
@@ -322,6 +361,7 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
 
 
 
