@@ -330,11 +330,13 @@ public class CheckoutSolutionTest {
 
     // Policy: The policy of the supermarket is to always favor the customer when applying special offers.
     //         So QQQRRR - should:
-    //             Get the discount of 3
+    //             Get the discount of 3Qs for 80
+    //             And then remove the price of one fulle Price q (i.e. 30)
+    //         Total cost: 50 + (cost of 3 Rs)
     @Test
     void testCheckoutWithOfferForQ2() {
-        String skus = "HHHHHH";
-        Integer expectedCost = 55;
+        String skus = "QQQRRR";
+        Integer expectedCost = 200;
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
@@ -361,6 +363,7 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
 
 
 
