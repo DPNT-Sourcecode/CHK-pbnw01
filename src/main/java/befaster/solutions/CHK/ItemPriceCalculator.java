@@ -2,6 +2,8 @@ package befaster.solutions.CHK;
 
 import java.util.Map;
 
+// TODO - the calculateTotalCostForItem? logic could be refactored using a few methods to prevent the repeated patterns of while loops
+//        e.g. 2 ? for price X
 public class ItemPriceCalculator {
 
     public static int calculateTotalCost(Map<Sku, Integer> basket) {
@@ -47,7 +49,9 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemL(basket.get(key).intValue());
                     break;
                 case M:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemM(basket.get(key).intValue());
+                    Integer quantityOfN = basket.get(Sku.N);
+                    int intQuantityOfN = (quantityOfN == null) ? 0 : quantityOfN.intValue(); 
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemM(basket.get(key).intValue(), intQuantityOfN);
                     break;
                 case N:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemN(basket.get(key).intValue());
@@ -59,7 +63,9 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemP(basket.get(key).intValue());
                     break;
                 case Q:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemQ(basket.get(key).intValue());
+                    Integer quantityOfR = basket.get(Sku.R);
+                    int intQuantityOfR = (quantityOfR == null) ? 0 : quantityOfR.intValue(); 
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemQ(basket.get(key).intValue(), );
                     break;
                 case R:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemR(basket.get(key).intValue());
@@ -77,16 +83,16 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemV(basket.get(key).intValue());
                     break;
                 case W:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemW(basket.get(key).intValue());
                     break;
                 case X:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemX(basket.get(key).intValue());
                     break;
                 case Y:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemY(basket.get(key).intValue());
                     break;
                 case Z:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemF(basket.get(key).intValue());
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemZ(basket.get(key).intValue());
                     break;
             }        
         }
@@ -313,4 +319,5 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
