@@ -47,16 +47,16 @@ public class CheckoutSolution {
                     basket.merge(Sku.A, 1, Integer::sum);
                     break;
                 case 'B':
-                    basket.merge(Sku.A, 1, Integer::sum);
+                    basket.merge(Sku.B, 1, Integer::sum);
                     break;
                 case 'C':
-                    basket.merge(Sku.A, 1, Integer::sum);
+                    basket.merge(Sku.C, 1, Integer::sum);
                     break;
                 case 'D':
-                    basket.merge(Sku.A, 1, Integer::sum);
+                    basket.merge(Sku.D, 1, Integer::sum);
                     break;
                 case 'E':
-                    basket.merge(Sku.A, 1, Integer::sum);
+                    basket.merge(Sku.E, 1, Integer::sum);
                     break;
             }
         }
@@ -64,6 +64,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 

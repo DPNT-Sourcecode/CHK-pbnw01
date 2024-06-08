@@ -12,7 +12,9 @@ public class ItemPriceCalculator {
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemA(basket.get(key).intValue());
                     break;
                 case B:
-                    totalCost += ItemPriceCalculator.calculateTotalCostForItemB(basket.get(key).intValue(), basket.get(Sku.E).intValue());
+                    Integer quantityOfE = basket.get(Sku.E);
+                    int intQuantityOfE = (quantityOfE == null) ? 0 : quantityOfE.intValue(); 
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemB(basket.get(key).intValue(), intQuantityOfE);
                     break;
                 case C:
                     totalCost += ItemPriceCalculator.calculateTotalCostForItemC(basket.get(key).intValue());
@@ -74,6 +76,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
