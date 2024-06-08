@@ -211,6 +211,7 @@ public class ItemPriceCalculator {
     }
 
     private static int calculateTotalCostForItemM(int quantityOfM, int quantityOfN) {
+        // This approach fails the test suite - see "calculateTotalCostForItemQ()" below for justification of this approach
         int costForItems = 0;
         while (quantityOfN >= 3) {
             costForItems -= 15;
@@ -223,6 +224,12 @@ public class ItemPriceCalculator {
         // Protect against a negative costForItem M
         costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
+
+        int costForItems = 0
+        while (quantityOfM > 0) {
+            costForItems += 15;
+            quantityOfM--;
+    }
     }
 
     private static int calculateTotalCostForItemN(int quantity) {
@@ -256,14 +263,33 @@ public class ItemPriceCalculator {
         //         Total cost: 50 + (cost of 3 Rs) = 200
         // But according to the results of the test suite - the correct logic is:
         //         QQQRRR:
-        //          - Three 
+        //          - Three Rs - so one Q free
+        //          - Therefore now 2 Qs = 60
+        //          - total cost = 60 + (cost of 3 Rs) = 210
+        // int costForItems = 0;
+        // while (quantityOfR >= 3) {
+        //     costForItems -= 30;
+        //     quantityOfR -=3;
+        // }
+        // while (quantityOfQ > 0) {
+        //     if (quantityOfQ >= 3) {
+        //         costForItems += 80;
+        //         quantityOfQ -= 3;
+        //     } else {
+        //         costForItems += 30;
+        //         quantityOfQ--;
+        //     }
+        // }
+        // // Protect against a negative costForItem Q
+        // costForItems = (costForItems >= 0) ? costForItems : 0;
+        // return costForItems;
+
         int costForItems = 0;
-        while (quantityOfR >= 3) {
-            costForItems -= 30;
-            quantityOfR -=3;
-        }
         while (quantityOfQ > 0) {
-            if (quantityOfQ >= 3) {
+            if (quantityOfR >= 3) {
+                quantityOfR -= 3;
+                quantityOfQ--;
+            } else if (quantityOfQ >= 3) {
                 costForItems += 80;
                 quantityOfQ -= 3;
             } else {
@@ -271,8 +297,6 @@ public class ItemPriceCalculator {
                 quantityOfQ--;
             }
         }
-        // Protect against a negative costForItem Q
-        costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
     }
 
@@ -336,4 +360,5 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
