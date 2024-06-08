@@ -385,13 +385,13 @@ public class ItemPriceCalculator {
         return quantity * 50;
     }
 
-    private static int calculateTotalCostForItemS(int quantity) {
-        return quantity * 30;
-    }
+    // private static int calculateTotalCostForItemS(int quantity) {
+    //     return quantity * 20;
+    // }
 
-    private static int calculateTotalCostForItemT(int quantity) {
-        return quantity * 20;
-    }
+    // private static int calculateTotalCostForItemT(int quantity) {
+    //     return quantity * 20;
+    // }
 
     private static int calculateTotalCostForItemU(int quantity) {
         int costForItems = 0;
@@ -428,19 +428,20 @@ public class ItemPriceCalculator {
         return quantity * 20;
     }
 
-    private static int calculateTotalCostForItemX(int quantity) {
-        return quantity * 90;
-    }
+    // private static int calculateTotalCostForItemX(int quantity) {
+    //     return quantity * 17;
+    // }
 
-    private static int calculateTotalCostForItemY(int quantity) {
-        return quantity * 10;
-    }
+    // private static int calculateTotalCostForItemY(int quantity) {
+    //     return quantity * 20;
+    // }
 
-    private static int calculateTotalCostForItemZ(int quantity) {
-        return quantity * 50;
-    }
+    // private static int calculateTotalCostForItemZ(int quantity) {
+    //     return quantity * 21;
+    // }
 
 }
+
 
 
 
