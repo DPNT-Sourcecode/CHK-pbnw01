@@ -57,15 +57,9 @@ public class CheckoutSolution {
         }
 
         totalCost += (numC * 20);
-        totalCost += (numD * 20);
+        totalCost += (numD * 15);
 
-        return totalCost;
+        return Integer.valueOf(totalCost);
     }
 
 }
-
-
-
-
-
-
