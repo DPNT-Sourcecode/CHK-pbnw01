@@ -6,6 +6,13 @@ import java.util.Map;
 import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
+
+    Map<Sku, Integer> basket;
+
+    public CheckoutSolution() {
+        basket = new
+    }
+
     public Integer checkout(String skus) {
         char[] skusArray = skus.toCharArray();
         int numA, numB, numC, numD;
@@ -63,4 +70,5 @@ public class CheckoutSolution {
     }
 
 }
+
 
