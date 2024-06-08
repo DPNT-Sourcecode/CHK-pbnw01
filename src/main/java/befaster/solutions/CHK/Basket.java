@@ -17,8 +17,17 @@ public class Basket {
         return basket;
     }
 
+    public int getTotalCost() {
+        return totalCost;
+    }
+
+    public int calculateTotalCost() {
+        return -1;
+    }
+
     
 
 
 }
+
 
