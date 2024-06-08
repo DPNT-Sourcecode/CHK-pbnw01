@@ -7,8 +7,12 @@ import java.util.Map;
 //        But because this is a timed test, I'm going to leave the while loops as they are
 public class ItemPriceCalculator {
 
+    private static Sku[] groupDiscountSkusPriceDescending = { Sku.Z, Sku.S, Sku.T, Sku.Y, Sku.X };
+
     public static int calculateTotalCost(Map<Sku, Integer> basket) {
         int totalCost = 0;
+
+        // For no group discount items
         for (Sku key : basket.keySet()) {
             switch (key) {
                 case A:
@@ -385,8 +389,3 @@ public class ItemPriceCalculator {
     }
 
 }
-
-
-
-
-
