@@ -8,6 +8,8 @@ import befaster.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
 
     Map<Sku, Integer> basket;
+    final char MIN_ITEM_CHAR = 'A';
+    final char MAX_ITEM_CHAR = 'E';
 
     public CheckoutSolution() {
         basket = new HashMap<Sku, Integer>();
@@ -50,23 +52,29 @@ public class CheckoutSolution {
     private boolean addItemsToBasket(char[] skusArray) {
 
         for (int i = 0; i < skusArray.length; i++) {
-            if (skusArray[i] < 'A' || skusArray[i] > 'D') {
+            if (skusArray[i] < MIN_ITEM_CHAR || skusArray[i] > MAX_ITEM_CHAR) {
                 // Error - invalid item
-                return Integer.valueOf(-1);
+                return false;
             }
             switch (skusArray[i]) {
                 case 'A':
-                    numA++;
+                    basket.merge(Sku.A, 1, Integer::sum);
                     break;
                 case 'B':
+                    basket.merge(Sku.A, 1, Integer::sum);
                     numB++;
                     break;
                 case 'C':
+                    basket.merge(Sku.A, 1, Integer::sum);
                     numC++;
                     break;
                 case 'D':
+                    basket.merge(Sku.A, 1, Integer::sum);
                     numD++;
                     break;
+                case 'E':
+                    basket.merge(Sku.A, 1, Integer::sum);
+
             }
         }
 
@@ -74,6 +82,3 @@ public class CheckoutSolution {
     }
 
 }
-
-
-

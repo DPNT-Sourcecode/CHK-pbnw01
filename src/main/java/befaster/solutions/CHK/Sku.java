@@ -7,4 +7,3 @@ public enum Sku {
     D,
     E
 }
-
