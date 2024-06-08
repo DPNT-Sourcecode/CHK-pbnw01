@@ -7,9 +7,11 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
 
+    // Variables
     Map<Sku, Integer> basket;
     int totalCost;
 
+    // Constants
     final char MIN_ITEM_CHAR = 'A';
     final char MAX_ITEM_CHAR = 'E';
 
@@ -32,28 +34,7 @@ public class CheckoutSolution {
         // Calculate the totalCost (taking into account special offers)
         int totalCost = 0;
 
-        // while (numA > 0) {
-        //     if (numA >= 3) {
-        //         totalCost += 130;
-        //         numA -= 3;
-        //     } else {
-        //         totalCost += 50;
-        //         numA--;
-        //     }
-        // }
-
-        // while (numB > 0) {
-        //     if (numB >= 2) {
-        //         totalCost += 45;
-        //         numB -= 2;
-        //     } else {
-        //         totalCost += 30;
-        //         numB--;
-        //     }
-        // }
-
-        // totalCost += (numC * 20);
-        // totalCost += (numD * 15);
+        
 
         return Integer.valueOf(totalCost);
     }
@@ -88,4 +69,5 @@ public class CheckoutSolution {
     }
 
 }
+
 
