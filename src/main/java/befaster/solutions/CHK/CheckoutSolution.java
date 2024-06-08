@@ -7,6 +7,8 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
 
+    private
+
     // Variables
     Map<Sku, Integer> basket;
     int totalCost;
@@ -21,6 +23,7 @@ public class CheckoutSolution {
     }
 
     public Integer checkout(String skus) {
+        // totalCost = 0;
         char[] skusArray = skus.toCharArray();
 
         if (!addItemsToBasket(skusArray)) {
@@ -64,3 +67,4 @@ public class CheckoutSolution {
     }
 
 }
+
