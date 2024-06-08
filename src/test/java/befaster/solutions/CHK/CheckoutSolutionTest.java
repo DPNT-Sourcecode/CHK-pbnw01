@@ -380,6 +380,13 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 
+    @Test
+    void testWithLargeCombination1() {
+        String skus = "PPPPQRUVPQRUVPQRUVSU";
+        Integer expectedCost = 740;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
     // Invalid items
     @Test
     void testCheckoutWithInvalidItems1() {
@@ -402,6 +409,7 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
 
 
 
