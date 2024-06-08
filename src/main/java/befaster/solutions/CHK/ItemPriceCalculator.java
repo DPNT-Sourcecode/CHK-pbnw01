@@ -214,11 +214,59 @@ public class ItemPriceCalculator {
         return costForItems;
     }
 
-    private static int calculateTotalCostForItemL(int quantity) {
-        return quantity * 90;
+    private static int calculateTotalCostForItemN(int quantity) {
+        return quantity * 40;
     }
 
+    private static int calculateTotalCostForItemO(int quantity) {
+        return quantity * 10;
+    }
+
+    private static int calculateTotalCostForItemP(int quantity) {
+        int costForItems = 0;
+        while (quantity > 0) {
+            if (quantity >= 5) {
+                costForItems += 200;
+                quantity -= 5;
+            } else {
+                costForItems += 50;
+                quantity--;
+            }
+        }
+        return costForItems;
+    }
+
+    private static int calculateTotalCostForItemQ(int quantityOfQ, int quantityOfR) {
+        int costForItems = 0;
+        while (quantity > 0) {
+            if 
+        } else if(quantity >= 3) {
+                costForItems += 80;
+                quantity -= 3;
+            } else {
+                costForItems += 30;
+                quantity--;
+            }
+        }
+        return costForItems;
+    }
+
+    private static int calculateTotalCostForItemR(int quantity) {
+        int costForItems = 0;
+        while (quantity > 0) {
+            if (quantity >= 3) {
+                costForItems += 80;
+                quantity -= 3;
+            } else {
+                costForItems += 30;
+                quantity--;
+            }
+        }
+        return costForItems;
+    } 
+
 }
+
 
 
 
