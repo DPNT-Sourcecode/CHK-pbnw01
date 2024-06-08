@@ -3,7 +3,8 @@ package befaster.solutions.CHK;
 import java.util.Map;
 
 // TODO - the calculateTotalCostForItem? logic could be refactored using a few methods to prevent the repeated patterns of while loops
-//        e.g. 2 ? for price X
+//        e.g. numberOfItemForPrice(args) and buyNumberGetOneFree(args)
+//        But because this is a timed test, I'm going to leave the while loops as they are
 public class ItemPriceCalculator {
 
     public static int calculateTotalCost(Map<Sku, Integer> basket) {
@@ -319,5 +320,6 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 

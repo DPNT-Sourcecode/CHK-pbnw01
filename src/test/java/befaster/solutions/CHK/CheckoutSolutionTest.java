@@ -14,6 +14,190 @@ public class CheckoutSolutionTest {
         checkoutSolution = new CheckoutSolution();
     }
 
+    // Test individual skus
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualB() {
+        String skus = "B";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    @Test
+    void testIndividualA() {
+        String skus = "A";
+        Integer expectedCost = 50;
+        assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
+    }
+
+    // Test groups of skus
     @Test
     void testAThenBIndividually() {
         String skus = "A";
@@ -123,3 +307,4 @@ public class CheckoutSolutionTest {
         assertEquals(expectedCost, checkoutSolution.checkout(skus), "Total cost calculated incorrectly");
     }
 }
+
