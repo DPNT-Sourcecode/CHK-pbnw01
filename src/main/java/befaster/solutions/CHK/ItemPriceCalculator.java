@@ -1,25 +1,30 @@
 package befaster.solutions.CHK;
 
+import java.security.Key;
+import java.util.Map;
+
 public class ItemPriceCalculator {
 
-    public static int calculateTotalCost(Sku sku, int quantity) {
+    public static int calculateTotalCost(Map<Sku, Integer> basket) {
         int totalCost = 0;
-        switch (sku) {
-            case A:
-                totalCost += ItemPriceCalculator.calculateTotalCostForItemA(quantity);
-                break;
-            case B:
-                totalCost += ItemPriceCalculator.calculateTotalCostForItemB(quantity);
-                break;
-            case C:
-                totalCost += ItemPriceCalculator.calculateTotalCostForItemC(quantity);
-                break;
-            case D:
-                totalCost += ItemPriceCalculator.calculateTotalCostForItemD(quantity);
-                break;
-            case E:
-                totalCost += ItemPriceCalculator.calculateTotalCostForItemE(quantity);
-                break;
+        for (Sku key : basket.keySet()) {
+            switch (key) {
+                case A:
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemA(basket.get(key).intValue());
+                    break;
+                case B:
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemB(basket.get(key).intValue(), basket.get(Sku.E));
+                    break;
+                case C:
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemC(basket.get(key).intValue());
+                    break;
+                case D:
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemD(basket.get(key).intValue());
+                    break;
+                case E:
+                    totalCost += ItemPriceCalculator.calculateTotalCostForItemE(basket.get(key).intValue());
+                    break;
+            }        
         }
         return totalCost;
     }
@@ -70,6 +75,7 @@ public class ItemPriceCalculator {
     }
 
 }
+
 
 
 
