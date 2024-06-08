@@ -129,25 +129,10 @@ public class ItemPriceCalculator {
                 quantityOfB -= 2;
             } else {
                 costForItems += 30;
-                quantityOfQ--;
+                quantityOfB--;
             }
         }
         costForItems = (costForItems >= 0) ? costForItems : 0;
-        return costForItems;
-
-        int costForItems = 0;
-        while (quantityOfB > 0) {
-            if (quantityOfE >= 2) {
-                quantityOfE -= 2;
-                quantityOfB--;
-            } else if (quantityOfB >= 2) {
-                costForItems += 45;
-                quantityOfB -= 2;
-            } else {
-                costForItems += 30;
-                quantityOfB--;
-            }
-        }
         return costForItems;
     }
 
@@ -226,15 +211,16 @@ public class ItemPriceCalculator {
 
     private static int calculateTotalCostForItemM(int quantityOfM, int quantityOfN) {
         int costForItems = 0;
+        while (quantityOfN >= 3) {
+            costForItems -= 15;
+            quantityOfN -=3;
+        }
         while (quantityOfM > 0) {
-            if (quantityOfN >= 3) {
-                quantityOfN -= 3;
-                quantityOfM--;
-            } else {
                 costForItems += 15;
                 quantityOfM--;
-            }
         }
+        // Protect against a negative costForItemM
+        costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
     }
 
@@ -262,7 +248,7 @@ public class ItemPriceCalculator {
 
     private static int calculateTotalCostForItemQ(int quantityOfQ, int quantityOfR) {
         int costForItems = 0;
-        while (quantityOfR > 0) {
+        while (quantityOfR >= 3) {
             costForItems -= 30;
             quantityOfR -=3;
         }
@@ -275,6 +261,7 @@ public class ItemPriceCalculator {
                 quantityOfQ--;
             }
         }
+        // Protect against a negative costForItem Q
         costForItems = (costForItems >= 0) ? costForItems : 0;
         return costForItems;
     }
@@ -339,9 +326,3 @@ public class ItemPriceCalculator {
     }
 
 }
-
-
-
-
-
-
