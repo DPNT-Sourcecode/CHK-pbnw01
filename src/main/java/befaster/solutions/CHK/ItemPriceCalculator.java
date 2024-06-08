@@ -51,7 +51,7 @@ public class ItemPriceCalculator {
         int costForItems = 0;
         while (quantityOfB > 0) {
             if (quantityOfE >= 2) {
-                quantityOfE--;
+                quantityOfE -= 2;
                 quantityOfB--;
             } else if (quantityOfB >= 2) {
                 costForItems += 45;
@@ -77,3 +77,4 @@ public class ItemPriceCalculator {
     }
 
 }
+
